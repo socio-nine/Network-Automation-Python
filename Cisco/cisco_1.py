@@ -22,16 +22,16 @@ iosv1 = []
 credentials = open("credentials.txt", "r")
 print(credentials.read())
 
-# for i in range(177,179):
-#     temp = {}
-#     temp.update({'ip' : '10.10.20.' + str(i)})
-#     temp.update(**base)
-#     temp.update(**credentials)
-#     # net_connect = ConnectHandler(**temp)
+for i in range(177,179):
+    temp = {}
+    temp.update({'ip' : '10.10.20.' + str(i)})
+    temp.update(**base)
+    temp.update(**credentials)
+    net_connect = ConnectHandler(**temp)
     
-#     print(temp)
-#     for n in range(110, 112):
-#         # output = net_connect.send_config_set(['vlan ' + str(n), 'name hoge' + str(n)])
-#         # print(output)
+    print(temp)
+    for n in range(110, 112):
+        output = net_connect.send_config_set(['vlan ' + str(n), 'name hoge' + str(n)])
+        print(output)
 
-#     # print(net_connect.send_command('copy running-config startup-config'))
+    # print(net_connect.send_command('copy running-config startup-config'))
